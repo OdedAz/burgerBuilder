@@ -1,0 +1,78 @@
+.body{
+    padding:2em;
+}
+.main-wrapper{
+    background-position: center;
+    box-sizing: border-box;
+    display: flex;
+    background-color: blueviolet;
+    position: fixed;
+    width:80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    
+}
+.top-right{
+    margin: 5% 5% 5% 5%;
+    border: 10px solid black;
+    padding: 2px 20px 2px 20px;
+  
+    height: 20vh;
+    border-radius: 0 0 0 30%; 
+}
+.top-left{
+   
+    margin: 5% 5% 5% 5%;
+    border: 10px solid black;
+    padding: 2px 20px 2px 20px;
+   
+    height: 20vh;
+    border-radius: 0 0 30% 0; 
+}
+.bottom-right{
+  
+    margin: 5% 5% 5% 5%;
+    border: 10px solid black;
+    padding: 2px 20px 2px 20px;
+    
+    height: 20vh;
+    border-radius: 30% 0 0 0; 
+}
+.bottom-left{
+    margin: 5% 5% 5% 5%;
+    border: 10px solid black;
+    padding: 2px 20px 2px 20px;
+ 
+    height: 20vh;
+    border-radius: 0 30% 0 0; 
+}
+.middle{
+    padding: 20% 20% 20% 20%;
+    border: 1em solid black;
+    border-radius: 50%;
+
+}
+.right{
+  width:50%;  
+}
+.left{
+    width:50%;
+}
+@media (min-width:500px) and (min-height:401px) {
+    .Burger {
+        width: 450px;
+        height:400px;
+    }
+}
+@media (min-width:1000px) and (min-height:700px) {
+    .Burger {
+        width: 700px;
+        height:600px;
+    }
+}
+@media (min-width:500px) and (min-height:400px) {
+    .Burger {
+        width: 350px;
+        height:300px;
+    }
+}
