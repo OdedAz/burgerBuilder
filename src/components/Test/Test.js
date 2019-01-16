@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Aux from '../../hoc/Aux';
+import Auxy from '../../hoc/Auxy';
 
 import classes from './Test.css';
 
 const layout = (props) => (
-    <Aux>
+    <Auxy>
         <div className='main-wrapper'>
             <div className='left'>
                 <div className='top-left' >option 1</div>
@@ -19,7 +19,7 @@ const layout = (props) => (
                 <div className='bottom-right' >option 4</div>
             </div>
         </div>
-    </Aux>
+    </Auxy>
 );
 
 export default layout;

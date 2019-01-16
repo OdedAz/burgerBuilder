@@ -5,7 +5,7 @@ import Burger from '../../components/Burger/Burger';
 import BuildControls from '../../components/BuildControls/BuildControls';
 import Modal from '../../components/UI/Modal/Modal';
 import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
-import orderSummary from '../../components/Burger/OrderSummary/OrderSummary';
+
 
 const INGREDIENTS_PRICES = {
     salad: 0.5,
@@ -73,6 +73,14 @@ class BurgerBuilder extends Component {
         this.setState({purchasing: true});
     }
 
+    purchaseCancelHandler = () => {
+        this.setState({purchasing: false});
+    }
+
+    PurchaseContinueHandler = () => {
+        alert('You continue!');
+    }
+
     render() {
         const disabledInfo = {
             ...this.state.ingredients
@@ -82,10 +90,17 @@ class BurgerBuilder extends Component {
         }
         return (
             <Auxy>
-                <Modal show={this.state.purchasing}>
-                    <OrderSummary ingredients={this.state.ingredients}/>
+                <Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHandler}>
+                    <OrderSummary 
+                    ingredients={this.state.ingredients}
+                    purchaseContinued={this.PurchaseContinueHandler}
+                    purchaseCancelled={this.purchaseCancelHandler}
+                    totalPrice={this.state.totalPrice}
+                    />
                 </Modal>
-                <Burger ingredients={this.state.ingredients} />
+                <Burger 
+                    ingredients={this.state.ingredients}
+                    totalPrice={this.totalPrice} />
                 <BuildControls 
                     ingredientAdded = {this.addIngredientHandler}
                     ingredientRemoved = {this.removeIngredientHandler}
