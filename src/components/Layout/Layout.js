@@ -1,13 +1,16 @@
 import React from 'react';
 
-import Auxy from '../../hoc/Auxy';
-
 import classes from './Layout.css';
+
+import Auxy from '../../hoc/Auxy';
+import Toolbar from '../Navigation/Toolbar/Toolbar';
+
+
 
 const layout = (props) => (
     <Auxy>
-        <div>Toolbar, SideDrawwer, Backdrop</div>
-        <main className={classes.Content}>
+        <Toolbar />
+        <main className="Content">
             {props.children}
         </main>
     </Auxy>
